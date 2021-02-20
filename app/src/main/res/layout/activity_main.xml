@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<TextView
+    android:id="@+id/titleTv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="indian covid tracker"
+    android:textAlignment="center"
+    android:textSize="24sp"
+    android:textAllCaps="true"
+    android:textStyle="bold"
+    android:layout_marginTop="5dp"/>
+
+
+    <TextView
+        android:id="@+id/lastUpdateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="viewEnd"
+        android:text="last updated \n "
+        android:textColor="@color/dark_green"
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/titleTv">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONFIRMED"
+                android:textColor="@color/dark_red"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/coronavirus"
+                app:tint="@color/dark_red" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:id="@+id/confirmedTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_red"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACTIVE"
+                android:textColor="@color/dark_blue"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/patient"
+                app:tint="@color/dark_blue" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:id="@+id/activeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_blue"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RECOVERED"
+                android:textColor="@color/dark_green"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/heart"
+                app:tint="@color/dark_green" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:id="@+id/recoveredTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_green"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DEATHS"
+                android:textColor="@color/dark_yellow"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/death"
+                app:tint="@color/dark_yellow" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:id="@+id/deathTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_yellow"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/container"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+
+</RelativeLayout>
